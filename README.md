@@ -1,18 +1,34 @@
-Instructions on how to run the web application. I did it on a Mac, so I have written the instructions according to a Mac:
+# How to Run the Django Web Application
 
-Open a terminal window on your Mac.
-Navigate to the root directory of the Django project using the cd command. For example, the project is in a folder named Section2 in folder assignment you would run:
-		cd Desktop/assignment/Section2
-Activate virtual environment if you are using any(I used a virtual environment while making the web app)
-Install required dependencies by running
-	pip install numpy(and)pytz(and)psutil
-	pip install django-crispy-forms
-	pip install crispy-bootstrap4
-	pip install bootstrap4
-	pip install Pillow	
-Run database migrations by running:
-	python manage.py migrate
-Finally start the development server by running:
-	python manage.py runserver	
-This will start the Django development server, and you should see output indicating that the server is running.
-Open a web browser and visit http://localhost:8000/ to access the Django web application.That's it! The Django web application should now be running locally on your Mac. Remember to keep the terminal window open while testing or developing your application.
+Follow these steps to set up and run the Django web application on your Mac:
+
+## Prerequisites
+
+- Ensure you have Python installed on your Mac.
+- It is recommended to use a virtual environment for dependency management.
+
+## Instructions
+
+1. **Open a Terminal Window**  
+   Open a terminal on your Mac.
+
+2. **Navigate to the Project Directory**  
+   Use the `cd` command to navigate to the root directory of your Django project. For example, if the project is in a folder named `Section2` inside the `assignment` folder on your desktop, you would run:
+   ```bash
+   cd Desktop/assignment/Section2
+
+3. Run the following commands to install the necessary dependencies:
+   pip install numpy pytz psutil
+   pip install django-crispy-forms
+   pip install crispy-bootstrap4
+   pip install bootstrap4
+   pip install Pillow
+4. Apply the necessary database migrations by running:
+   python manage.py migrate
+5. Start the Django development server with the following command:
+   python manage.py runserver
+6. Open a web browser and visit http://localhost:8000/ to access the Django web application.
+
+Notes:
+Keep the terminal window open while testing or developing your application.
+For production use, do not use the development server. Instead, configure a production-ready server like Gunicorn or Apache.
